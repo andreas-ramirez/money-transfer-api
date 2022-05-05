@@ -1,0 +1,15 @@
+2022-05-04T22:21:53.9570887 500 : [{"timestamp":"2022-05-05T02:21:53.920+00:00","status":500,"error":"Internal Server Error","message":"PreparedStatementCallback; SQL [INSERT INTO transfer(account_from, account_to, amount, transfer_typ... (499 bytes)]
+2022-05-04T22:35:25.9356006 401 : [no body]
+2022-05-04T22:36:02.1021776 500 : [{"timestamp":"2022-05-05T02:36:02.074+00:00","status":500,"error":"Internal Server Error","message":"PreparedStatementCallback; bad SQL grammar [INSERT INTO transfer(account_from, account_to, amount, ... (631 bytes)]
+2022-05-04T22:36:34.8339452 500 : [{"timestamp":"2022-05-05T02:36:34.828+00:00","status":500,"error":"Internal Server Error","message":"PreparedStatementCallback; bad SQL grammar [INSERT INTO transfer(account_from, account_to, amount, ... (631 bytes)]
+2022-05-04T22:59:14.6188257 I/O error on GET request for "http://localhost:8080/account/users": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-05-04T23:15:15.8014356 400 : [{"timestamp":"2022-05-05T03:15:15.754+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='transfer'. Error count: 1","errors":[{"codes":["Min.transfer.transferStatusId",... (579 bytes)]
+2022-05-04T23:21:52.1378527 I/O error on GET request for "http://localhost:8080/account/users": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-05-04T23:22:01.0438912 I/O error on GET request for "http://localhost:8080/account/balance": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-05-04T23:22:08.0782369 I/O error on GET request for "http://localhost:8080/account/users": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-05-04T23:22:14.8164935 I/O error on GET request for "http://localhost:8080/account/users": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-05-04T23:31:14.0258315 401 : [no body]
+2022-05-04T23:39:22.602735 401 : [no body]
+2022-05-04T23:40:27.1388277 401 : [no body]
+2022-05-04T23:41:00.4359538 401 : [no body]
+2022-05-04T23:52:20.0281262 500 : [{"timestamp":"2022-05-05T03:52:20.004+00:00","status":500,"error":"Internal Server Error","message":"PreparedStatementCallback; SQL [INSERT INTO transfer(account_from, account_to, amount, transfer_typ... (692 bytes)]

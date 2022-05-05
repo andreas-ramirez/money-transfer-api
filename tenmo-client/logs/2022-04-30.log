@@ -1,0 +1,2 @@
+2022-04-30T13:30:01.5169634 401 : [{"timestamp":"2022-04-30T17:30:01.426+00:00","status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/account/balance"}]
+2022-04-30T21:56:37.5212735 400 : [{"timestamp":"2022-05-01T01:56:37.479+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='transfer'. Error count: 1","errors":[{"codes":["Min.transfer.transferStatusId",... (579 bytes)]
