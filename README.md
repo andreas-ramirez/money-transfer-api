@@ -3,6 +3,11 @@
 ## Overview
 This a P2P money transfer application running off a CLI. Built off of Java and Spring Boot - this implement both the server and client for full interactivity.  
 
+## How To Use
+The server and the client should be launched in separate windows due to the program's structure and the way the dependencies are structured.  
+  
+To populate an SQL database, the database folder has a .sql file to quickly populate the necessary tables before launching/
+
 ### Future Developments
 - Develop full frontend UI
 - Expand database structure
