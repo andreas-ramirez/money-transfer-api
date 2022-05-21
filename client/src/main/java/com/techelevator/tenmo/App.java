@@ -42,6 +42,7 @@ public class App {
         }
     }
 
+    // login validation
     private void loginMenu() {
         int menuSelection = -1;
         while (menuSelection != 0 && currentUser == null) {
@@ -58,6 +59,7 @@ public class App {
         }
     }
 
+    // wil register new customer and create login credentials in database
     private void handleRegister() {
         System.out.println("Please register a new user account");
         UserCredentials credentials = consoleService.promptForCredentials();
@@ -68,6 +70,7 @@ public class App {
         }
     }
 
+    //provides authentication token for access. also creates populates the User model which allows for specific view
     private void handleLogin() {
         UserCredentials credentials = consoleService.promptForCredentials();
         currentUser = authenticationService.login(credentials);
@@ -80,6 +83,7 @@ public class App {
         }
     }
 
+    //standard menu options
     private void mainMenu() {
         int menuSelection = -1;
         while (menuSelection != 0) {
@@ -104,10 +108,13 @@ public class App {
         }
     }
 
+    //provides current balance based off of active user
     private void viewCurrentBalance() {
         System.out.println("Your current account balance is: $" + accountService.getBalance());
     }
 
+    //displays list of transfer history
+    //differentiates "From" and "To" by comparing current username vs name retrieved from transfer table
     private void viewTransferHistory() {
         Transfer[] transferHistory = transferService.viewTransfer();
         consoleService.transfersHeader();
@@ -133,6 +140,7 @@ public class App {
         }
     }
 
+    //shows all pending requests that the current user has received
     private void viewPendingRequests() {
         boolean updateRequestSuccess = false;
         Transfer[] pendingRequests = transferService.viewPendingRequests();
@@ -162,6 +170,7 @@ public class App {
         }
     }
 
+    //allows user to approve or reject request. logic for if transfer can be approved is on server-side
     private void updateRequest(int id, int option){
         Transfer transfer = new Transfer();
         transfer.setTransferId(id);
@@ -178,6 +187,7 @@ public class App {
         }
     }
 
+    //standard outbound transfer
     private void sendBucks() {
         listAllUsers();
         int accountTo = consoleService.promptForInt("\nEnter ID of user you are sending to (0 to cancel):");
@@ -203,6 +213,7 @@ public class App {
         }
     }
 
+    //builds and send request for funds from another user
     private void requestBucks() {
         Transfer transfer;
         listAllUsers();
@@ -221,6 +232,8 @@ public class App {
         }
     }
 
+    //shows a list of all users to transfer to
+    //if scale was larger, would use a search function
     private void listAllUsers() {
         System.out.println("----------------------");
         System.out.printf("%-10s %-10s", "User ID", "Name");
@@ -237,6 +250,7 @@ public class App {
         }
     }
 
+    //prints all transfer details to console
     private void transferDetails(int transferId) {
         System.out.println("-------------------------------------------");
         System.out.println("Transfer Details");
