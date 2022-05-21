@@ -8,7 +8,7 @@ This a P2P money transfer application running off a CLI. Built off of Java and S
 - Expand database structure
 - Implement mobile use (for testing purposes)
 
-### Uses Cases
+### Use Cases
 
 1. As a user of the system, I need to be able to register myself with a username and password.
    1. A new registered user starts with an initial balance of 1,000 TE Bucks.
